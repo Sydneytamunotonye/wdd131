@@ -1,0 +1,172 @@
+:root {
+    --primary: #1a73e8;
+    --secondary: #0d47a1;
+    --light: #f5f7fa;
+    --dark: #1b1b1b;
+    --accent: #ffb300;
+    --text: #333;
+}
+
+body {
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+header {
+    background: var(--primary);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header span {
+    display: block;
+    text-align: center;
+    /* required */
+}
+
+header h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 3rem;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    display: flex;
+    /* required */
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    /* hover effect */
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: var(--accent);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+
+main {
+    max-width: 1000px;
+    /* required */
+    margin: 2rem auto;
+    /* centered */
+    padding: 1rem;
+}
+
+.student-name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.8rem;
+    color: var(--secondary);
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+
+.content-grid {
+    display: grid;
+    /* required */
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.content-grid section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    /* small soft box shadow */
+    text-align: center;
+}
+
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.about,
+.location {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+
+.about .about-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.about .about-row p {
+    flex: 1;
+}
+
+.about .about-row img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+.location p {
+    text-align: center;
+}
+
+.location img {
+    width: 220px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+    align-self: left;
+}
+
+.Resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Resources li {
+    margin: 0.5rem 0;
+}
+
+.Resources a {
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.Resources a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: var(--dark);
+    color: white;
+    margin-top: 3rem;
+}

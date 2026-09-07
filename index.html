@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wdd131</title>
+    <meta name="description" content="This is my personal website for wdd131">
+    <meta name="author" content="Sydney Tamunotonye">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="week01/styles/base.css">
+    <script src="week01/scripts/getdates.js" defer></script>
+    <title>WDD 131 – Dynamic Web Fundamentals – Sydney Tamunotonye</title>
+
 </head>
+
 <body>
-    <h1>I am ready for wdd131</h1>
-    
+    <header>
+        <h1>WDD 131 – Dynamic Web Fundamentals</h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/sydneytamunotonye/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">I-learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng">Scripure</a>
+                </li>
+                <li><a href="contact.html">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="student-name">Sydney Tamunotonye</h1>
+        <div class="content-grid">
+            <div class="left-col">
+                <section class="about">
+                    <h2>About Me</h2>
+                    <div class="about-row">
+                        <p>My name is Sydney Tamunotonye, I was born in Nigeria and raised in Ghana. I am currently the
+                            CEO of TonyeWay LTD and the Co-founder of Sydnye Tammy HUB ltd. I don't have any experience
+                            in web development yet, but I am eager to learn and grow in this field. i also love to
+                            travel and explore new cultures.</p>
+                        <img src="week01/images/personal.jpg" alt="Sydney Tamunotonye" width="300">
+                    </div>
+                </section>
+
+                <section class="location">
+                    <h2>Port Harcourt, Nigeria</h2>
+                    <p>Port Harcourt is a city in Nigeria, located in the southern part of the country. It is the
+                        capital of Rivers State and is known for its oil industry and vibrant culture. The city has a
+                        rich history and is home to many ethnic groups, including the Ikwerre, Ogoni, and Ijaw people.
+                        Port Harcourt is also a hub for education and has several universities and research
+                        institutions. The city is known for its lively music scene, with many local artists gaining
+                        national and international recognition. Overall, Port Harcourt is a dynamic and diverse city
+                        that offers a unique blend of culture, history, and modernity.</p>
+                    <img src="week01/images/nigeria.jpg" alt="Port Harcourt, Nigeria" width="300">
+                </section>
+            </div>
+
+
+            <section class="Resources">
+                <h2>Web Dev Resources</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Performance">Dev.to
+                            Community</a></li>
+                    <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+                    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://www.udemy.com/">Udemy</a></li>
+                    <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+                </ul>
+            </section>
+        </div><!-- end .content-grid -->
+
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Sydney Tamunotonye. Nigeria All rights reserved.</p>
+        <p>last modified: <span id="lastmodified"></span></p>
+    </footer>
 </body>
+
 </html>
