@@ -22,9 +22,7 @@ body {
     min-height: 100vh;
 }
 
-/* ------------------------------
-   HEADER
---------------------------------*/
+
 header {
     background: var(--primary);
     color: white;
@@ -39,13 +37,7 @@ header h1 {
     margin: 0;
 }
 
-footer {
-    margin-top: auto;
-}
 
-/* ------------------------------
-   NAVIGATION
---------------------------------*/
 nav ul {
     list-style: none;
     padding: 0;
@@ -70,9 +62,7 @@ nav a:hover {
     color: var(--dark);
 }
 
-/* ------------------------------
-   MAIN / GRID
---------------------------------*/
+
 main {
     max-width: 1100px;
     margin: 2rem auto;
@@ -80,7 +70,7 @@ main {
     width: 100%;
 }
 
-/* Main heading = student name (single h1 in main) */
+
 main h1 {
     font-family: "Bebas Neue", sans-serif;
     font-size: 2.6rem;
@@ -89,7 +79,7 @@ main h1 {
     text-align: center;
 }
 
-/* Two cards side by side */
+
 .content-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -97,7 +87,7 @@ main h1 {
     align-items: start;
 }
 
-/* Card styling - each card has its own shadow */
+
 .card {
     background: white;
     padding: 1.5rem;
@@ -113,7 +103,7 @@ main h1 {
     color: var(--secondary);
 }
 
-/* Inside About card - photo on the right of bio */
+
 .about-row {
     display: flex;
     align-items: flex-start;
@@ -131,7 +121,7 @@ main h1 {
     border-radius: 8px;
 }
 
-/* Country block below the About Me block */
+
 .location-block {
     margin-top: 2rem;
     border-top: 1px solid #eee;
@@ -155,9 +145,7 @@ main h1 {
     border-radius: 8px;
 }
 
-/* ------------------------------
-   RESOURCES CARD
---------------------------------*/
+
 .card ul {
     list-style: none;
     padding: 0;
@@ -181,12 +169,11 @@ main h1 {
     text-decoration: underline;
 }
 
-/* ------------------------------
-   FOOTER
---------------------------------*/
+
 footer {
     text-align: center;
     padding: 2rem 1rem;
     background: var(--dark);
     color: white;
+    margin-top: auto;
 }
