@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A responsive Temple Album page showcasing temples from around the world, built for WDD131.">
+    <meta name="author" content="Sydney Tamunotonye">
+    <title>Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">Temple Album</span>
+        <button id="menu-button" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <div class="album">
+            <figure>
+                <img src="images/saltlake.jpg" alt="Salt Lake Temple" width="400" height="300" loading="lazy">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/provotemple.jpg" alt="Provo Utah Temple" width="400" height="300" loading="lazy">
+                <figcaption>Provo Utah Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/rometemple.jpg" alt="Rome Italy Temple" width="400" height="300" loading="lazy">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/accraghana1.jpg" alt="Accra Ghana Temple" width="400" height="300" loading="lazy">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/saopaulobrazil1.jpg" alt="São Paulo Brazil Temple" width="400" height="300"
+                    loading="lazy">
+                <figcaption>São Paulo Brazil Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/tokyojapantemple.jpeg" alt="Tokyo Japan Temple" width="400" height="300"
+                    loading="lazy">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/abanigeria.jpg" alt="Aba Nigeria Temple" width="400" height="300" loading="lazy">
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/johannesburgsouthafrica.jpg" alt="Johannesburg South Africa Temple" width="400"
+                    height="300" loading="lazy">
+                <figcaption>Johannesburg South Africa Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Arequipa.jpeg" alt="Arequipa Peru Temple" width="400" height="300" loading="lazy">
+                <figcaption>Arequipa Peru Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Sydney Tamunotonye. Nigeria All rights reserved.</p>
+        <p>last modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+
+</html>

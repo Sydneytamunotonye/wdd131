@@ -1,0 +1,38 @@
+@media (min-width: 640px) {
+
+   
+    header {
+        padding: 1rem 2rem;
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+
+    
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        flex-basis: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin: 0;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    
+    .album {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+}
