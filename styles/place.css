@@ -227,6 +227,12 @@ footer {
 
 
     .weather-icon {
-        display: block;
+        display: none;
+    }
+
+    /* ⛅ weather emoticon after the "Weather" heading in wider view */
+    .weather h2::after {
+        content: " \26C5";
+        margin-left: 0.4rem;
     }
 }
