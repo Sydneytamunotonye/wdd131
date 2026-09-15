@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A responsive country page about Nigeria, built for WDD131 using HTML, CSS, JavaScript and responsive images.">
+    <meta name="author" content="Sydney Tamunotonye">
+    <title>Nigeria — Place Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">NIGERIA</span>
+        <button id="menu-button" class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"></button>
+        <nav id="primary-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Cities</a></li>
+                <li><a href="#">Food</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Nigeria</h1>
+
+        <!-- Responsive hero image using srcset -->
+        <picture class="hero">
+            <source media="(min-width: 768px)" srcset="images/nigeria.jpg" type="image/jpeg">
+            <img src="images/nigeria.jpg" alt="A scenic view of Nigeria's landscape" width="1000" height="500">
+        </picture>
+
+        <section class="info-grid">
+            <div class="card data">
+                <h2>Data</h2>
+                <dl>
+                    <dt>Capital</dt>
+                    <dd>Abuja</dd>
+                    <dt>Largest City</dt>
+                    <dd>Lagos</dd>
+                    <dt>Population</dt>
+                    <dd>223,800,000</dd>
+                    <dt>Currency</dt>
+                    <dd>Nigerian Naira (₦)</dd>
+                    <dt>Official Language</dt>
+                    <dd>English</dd>
+                    <dt>Area</dt>
+                    <dd>923,769 km²</dd>
+                </dl>
+            </div>
+
+            <div class="card weather">
+                <h2>Weather</h2>
+                <!-- Weather icon shown in mobile view -->
+                <img class="weather-icon" src="images/weather.jpg" alt="Partly cloudy weather icon" width="60"
+                    height="60">
+                <ul>
+                    <li>Temperature: <span id="temperature">8&nbsp;°C</span></li>
+                    <li>Wind Speed: <span id="windspeed">12&nbsp;km/h</span></li>
+                    <li>Wind Chill: <span id="windchill"></span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="card content">
+            <h2>Discover Nigeria</h2>
+            <p>
+                Nigeria is the most populous country in Africa, a vibrant nation on the Gulf of
+                Guinea known for its rich culture, diverse languages, and booming entertainment
+                industry. From the bustling streets of Lagos to the savannas of the north, Nigeria
+                offers a blend of tradition and modernity that draws visitors from around the world.
+            </p>
+            <p>
+                Nollywood, Nigeria's film industry, is one of the largest in the world, and its music
+                scene — from Afrobeats to highlife — has a global following. The country is also home to
+                stunning natural landmarks and warm, welcoming people.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Sydney Tamunotonye. Nigeria All rights reserved.</p>
+        <p>last modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+
+</html>

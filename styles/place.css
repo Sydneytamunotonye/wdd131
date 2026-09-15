@@ -1,0 +1,232 @@
+:root {
+    --primary: #008751;
+    --primary-dark: #006b40;
+    --secondary: #ffffff;
+    --accent: #c8102e;
+    --light: #f5f7fa;
+    --dark: #1b1b1b;
+    --text: #222;
+    --on-primary: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Barlow", sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+header {
+    background: var(--primary);
+    color: var(--on-primary);
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-name {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.hamburger {
+    background: none;
+    border: 2px solid var(--on-primary);
+    border-radius: 5px;
+    color: var(--on-primary);
+    cursor: pointer;
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 0.2rem 0.5rem;
+}
+
+.hamburger::before {
+    content: "\2630";
+    /* hamburger */
+}
+
+.hamburger.open::before {
+    content: "\2715";
+    /* X */
+}
+
+nav {
+    flex-basis: 100%;
+    display: none;
+}
+
+nav.open {
+    display: block;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+nav a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: var(--on-primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: var(--primary-dark);
+}
+
+/* ---------- Main ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 100%;
+    flex: 1;
+}
+
+main h1 {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 2.4rem;
+    color: var(--primary-dark);
+    text-align: center;
+    margin: 0 0 1rem;
+}
+
+/* ---------- Hero ---------- */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    background: var(--secondary);
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 5px var(--shadow);
+    margin-top: 1.5rem;
+}
+
+.card h2 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 1px;
+    color: var(--primary-dark);
+    margin-top: 0;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 0.25rem;
+}
+
+
+.data dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.4rem 1rem;
+}
+
+.data dt {
+    font-weight: 800;
+    color: var(--primary-dark);
+}
+
+.data dd {
+    margin: 0;
+}
+
+
+.weather-icon {
+    display: block;
+    margin: 0 auto 0.5rem;
+    width: 60px;
+    height: 60px;
+}
+
+.weather ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.weather li {
+    padding: 0.25rem 0;
+    border-bottom: 1px solid var(--light);
+}
+
+
+footer {
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background: var(--dark);
+    color: var(--on-primary);
+    margin-top: auto;
+}
+
+
+@media (min-width: 768px) {
+
+    header {
+        padding: 1rem 2rem;
+        flex-wrap: nowrap;
+        gap: 2rem;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        display: block;
+        flex-basis: auto;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin: 0;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+    }
+
+    main h1 {
+        font-size: 3rem;
+    }
+
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .card {
+        margin-top: 1.5rem;
+    }
+
+
+    .weather-icon {
+        display: block;
+    }
+}
