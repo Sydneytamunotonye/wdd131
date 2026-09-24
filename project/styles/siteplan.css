@@ -1,0 +1,226 @@
+:root {
+    --green: #0f6b4f;
+    --blue: #1f3a5f;
+    --yellow: #ffb703;
+    --cloud: #f4f7f5;
+    --white: #ffffff;
+    --text: #20303c;
+
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Source Sans 3", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--cloud);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* ---------- Header ---------- */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    background: var(--green);
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+header h1 {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.tagline {
+    margin: 0.25rem 0 0;
+    color: var(--yellow);
+    font-size: 1rem;
+}
+
+/* ---------- Main ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+section {
+    background: var(--white);
+    border-left: 6px solid var(--blue);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--green);
+    margin-top: 0;
+    border-bottom: 2px solid var(--yellow);
+    padding-bottom: 0.35rem;
+}
+
+h2 + p,
+h2 + ul {
+    margin-top: 0.75rem;
+}
+
+ul {
+    padding-left: 1.25rem;
+}
+
+li {
+    margin: 0.4rem 0;
+}
+
+/* ---------- Color swatches ---------- */
+.swatches {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.swatch {
+    border: 1px solid #d9e0dd;
+    border-radius: 6px;
+    padding: 0.75rem;
+    background: var(--cloud);
+}
+
+.swatch-color {
+    height: 60px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.swatch-light {
+    border: 1px solid #d9e0dd;
+}
+
+.swatch p {
+    margin: 0.25rem 0;
+}
+
+.swatch .use {
+    font-size: 0.9rem;
+    color: var(--blue);
+}
+
+/* ---------- Typography demos ---------- */
+.type-demo-montserrat {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--green);
+}
+
+.type-demo-source {
+    font-family: var(--body-font);
+    font-size: 1rem;
+}
+
+/* ---------- Wireframes ---------- */
+.wireframes {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.wireframe {
+    margin: 0;
+    border: 2px dashed var(--blue);
+    border-radius: 8px;
+    padding: 1rem;
+    background: var(--cloud);
+}
+
+.wireframe figcaption {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.wf-box {
+    background: var(--white);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.85rem;
+    margin: 0.4rem 0;
+}
+
+.wf-header {
+    background: var(--green);
+    color: var(--white);
+    border-color: var(--green);
+}
+
+.wf-nav {
+    background: var(--yellow);
+    border-color: var(--yellow);
+}
+
+.wf-hero {
+    background: #cfe3db;
+    min-height: 70px;
+}
+
+.wf-footer {
+    background: var(--blue);
+    color: var(--white);
+    border-color: var(--blue);
+}
+
+.wf-row {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.wf-row .wf-box {
+    flex: 1;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    text-align: center;
+    background: var(--blue);
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+/* ---------- Wider view ---------- */
+@media (min-width: 640px) {
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .swatches {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .wireframes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

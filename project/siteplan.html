@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Website planning document for Getting Around Port Harcourt: A Commuter's Guide — a WDD131 project site plan.">
+    <meta name="author" content="Sydney Tamunotonye">
+    <title>Site Plan — Getting Around Port Harcourt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Port Harcourt commuter guide logo" width="64" height="64" class="logo">
+        <div>
+            <h1>Getting Around Port Harcourt</h1>
+            <p class="tagline">A Commuter's Guide — Website Planning Document</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- SITE NAME -->
+        <section>
+            <h2>Site Name</h2>
+            <p><strong>Site Name:</strong> Getting Around Port Harcourt</p>
+            <p><strong>Optional domain:</strong> phcommuterguide.com</p>
+            <p>
+                I chose this name because it is direct and describes exactly what the site does: help people
+                understand how to move around Port Harcourt using public transport. It is easy to remember and
+                clearly targets commuters — residents, students, and visitors — rather than tourists looking
+                for general travel information.
+            </p>
+        </section>
+
+        <!-- SITE PURPOSE -->
+        <section>
+            <h2>Site Purpose</h2>
+            <p>
+                The site provides a clear, organized guide to public transport in Port Harcourt, Rivers State.
+                It explains the different transport options (keke tricycles, buses, taxis, ride-hailing apps,
+                and water transport), lists major routes and landmarks used for navigation, gives typical fare
+                ranges and payment tips, and shares safety and etiquette advice. The goal is to give newcomers
+                the confidence to use the system and to give regular commuters useful, practical reference
+                information in one place.
+            </p>
+        </section>
+
+        <!-- SCENARIOS -->
+        <section>
+            <h2>Scenarios</h2>
+            <ul>
+                <li>How much should I expect to pay for a keke ride from Rumuokoro to Mile 1, and should I have
+                    exact change ready?</li>
+                <li>What are the busiest travel times to avoid in Port Harcourt, and how do I manage commuting
+                    during the rainy season?</li>
+                <li>Which transport option is safest and most affordable for a student traveling daily from
+                    Choba to Trans-Amadi?</li>
+            </ul>
+        </section>
+
+        <!-- COLOR SCHEMA -->
+        <section>
+            <h2>Color Schema</h2>
+            <p>
+                The palette is inspired by Port Harcourt's greenery and its riverside, oil-city identity. The
+                colors below are applied to this document already.
+            </p>
+
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#0f6b4f;"></div>
+                    <p><strong>Deep Palm Green</strong> (#0f6b4f)</p>
+                    <p class="use">Used for headings, header background, and primary accents.</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#1f3a5f;"></div>
+                    <p><strong>River Blue</strong> (#1f3a5f)</p>
+                    <p class="use">Used for body text, section borders, and the footer background.</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color" style="background:#ffb703;"></div>
+                    <p><strong>Taxi Yellow</strong> (#ffb703)</p>
+                    <p class="use">Used for accent highlights, links on hover, and callout backgrounds.</p>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-color swatch-light" style="background:#f4f7f5;"></div>
+                    <p><strong>Cloud White</strong> (#f4f7f5)</p>
+                    <p class="use">Used for page and card background color.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TYPOGRAPHY -->
+        <section>
+            <h2>Typography</h2>
+            <ul>
+                <li>
+                    <strong>Montserrat</strong> (600, 800) — used for all headings, the site name, and the
+                    navigation. It is bold, modern, and highly legible at large sizes.
+                </li>
+                <li>
+                    <strong>Source Sans 3</strong> (400, 600) — used for body paragraphs, lists, and captions.
+                    It is a clean, readable sans-serif designed for on-screen reading.
+                </li>
+            </ul>
+            <p class="type-demo-montserrat">This sentence demonstrates the Montserrat heading font.</p>
+            <p class="type-demo-source">This sentence demonstrates the Source Sans 3 body font.</p>
+        </section>
+
+        <!-- WIREFRAMES -->
+        <section>
+            <h2>Wireframes</h2>
+            <p>Home page layout for the mobile and desktop (wider) views.</p>
+
+            <div class="wireframes">
+                <!-- Mobile wireframe -->
+                <figure class="wireframe">
+                    <figcaption>Mobile View</figcaption>
+                    <div class="wf-box wf-header">Header / Logo</div>
+                    <div class="wf-box wf-nav">☰ Menu</div>
+                    <div class="wf-box wf-hero">Hero Image</div>
+                    <div class="wf-box wf-content">Intro Text</div>
+                    <div class="wf-box wf-card">Option Card</div>
+                    <div class="wf-box wf-card">Option Card</div>
+                    <div class="wf-box wf-footer">Footer</div>
+                </figure>
+
+                <!-- Desktop wireframe -->
+                <figure class="wireframe">
+                    <figcaption>Desktop View</figcaption>
+                    <div class="wf-box wf-header wf-full">Header — Logo + Horizontal Navigation</div>
+                    <div class="wf-box wf-hero wf-full">Hero Image (full width)</div>
+                    <div class="wf-row">
+                        <div class="wf-box wf-content">Intro Text</div>
+                        <div class="wf-box wf-card">Option Card</div>
+                    </div>
+                    <div class="wf-row">
+                        <div class="wf-box wf-card">Option Card</div>
+                        <div class="wf-box wf-card">Option Card</div>
+                        <div class="wf-box wf-card">Option Card</div>
+                    </div>
+                    <div class="wf-box wf-footer wf-full">Footer</div>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Getting Around Port Harcourt — Site Plan | Sydney Tamunotonye</p>
+    </footer>
+</body>
+
+</html>
