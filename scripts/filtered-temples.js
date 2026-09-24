@@ -92,8 +92,7 @@ const temples = [
         location: "Rome, Italy",
         dedicated: "2019, March, 10",
         area: 41010,
-        imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/rome-italy/2019/400x250/1-Rome-Temple-2160210.jpg"
+        imageUrl: "images/rometemple.jpg"
     }
 ];
 
