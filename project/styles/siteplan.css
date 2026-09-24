@@ -22,7 +22,6 @@ body {
     line-height: 1.6;
 }
 
-/* ---------- Header ---------- */
 header {
     display: flex;
     flex-wrap: wrap;
@@ -51,7 +50,6 @@ header h1 {
     font-size: 1rem;
 }
 
-/* ---------- Main ---------- */
 main {
     max-width: 900px;
     margin: 0 auto;
@@ -89,7 +87,6 @@ li {
     margin: 0.4rem 0;
 }
 
-/* ---------- Color swatches ---------- */
 .swatches {
     display: grid;
     grid-template-columns: 1fr;
@@ -123,7 +120,6 @@ li {
     color: var(--blue);
 }
 
-/* ---------- Typography demos ---------- */
 .type-demo-montserrat {
     font-family: var(--heading-font);
     font-weight: 600;
@@ -136,7 +132,6 @@ li {
     font-size: 1rem;
 }
 
-/* ---------- Wireframes ---------- */
 .wireframes {
     display: grid;
     grid-template-columns: 1fr;
@@ -201,7 +196,6 @@ li {
     flex: 1;
 }
 
-/* ---------- Footer ---------- */
 footer {
     text-align: center;
     background: var(--blue);
@@ -209,7 +203,6 @@ footer {
     padding: 1.5rem;
 }
 
-/* ---------- Wider view ---------- */
 @media (min-width: 640px) {
 
     header h1 {
