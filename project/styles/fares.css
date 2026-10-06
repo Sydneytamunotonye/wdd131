@@ -1,0 +1,184 @@
+/* Fares & Routes page styles */
+
+.table-wrap {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+caption {
+    text-align: left;
+    font-style: italic;
+    color: var(--blue);
+    padding-bottom: 0.5rem;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 0.6rem 0.75rem;
+    border-bottom: 1px solid var(--border);
+}
+
+thead th {
+    background: var(--green);
+    color: var(--white);
+    font-family: var(--heading-font);
+}
+
+tbody th {
+    color: var(--blue);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--cloud);
+}
+
+/* Calculator */
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: flex-end;
+    margin-top: 1rem;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+.field label {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--blue);
+}
+
+.field input,
+.field select,
+.field textarea {
+    padding: 0.6rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: var(--body-font);
+    font-size: 1rem;
+    width: 100%;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    outline: 2px solid var(--yellow);
+    border-color: var(--green);
+}
+
+.calc-output {
+    width: 100%;
+    margin: 0.5rem 0 0;
+    padding: 0.75rem 1rem;
+    background: var(--cloud);
+    border-left: 4px solid var(--green);
+    border-radius: 6px;
+    font-weight: 600;
+    color: var(--green-dark);
+}
+
+/* Landmarks */
+.landmark-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.landmark-card {
+    background: var(--cloud);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--yellow);
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.landmark-card h3 {
+    margin: 0 0 0.35rem;
+    color: var(--green);
+}
+
+.landmark-card p {
+    margin: 0;
+}
+
+/* Form */
+fieldset {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin: 0 0 1rem;
+}
+
+legend {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    color: var(--blue);
+    padding: 0 0.5rem;
+}
+
+.radio-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.radio-row label {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+
+.req {
+    color: #b00020;
+    font-weight: 400;
+    font-size: 0.85rem;
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.form-status.success {
+    background: #d8f0e5;
+    color: var(--green-dark);
+    border-left: 4px solid var(--green);
+}
+
+.form-status.error {
+    background: #ffe0e0;
+    color: #8a1010;
+    border-left: 4px solid #b00020;
+}
+
+#tips-list li {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 700px) {
+    .landmark-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .calculator .field {
+        flex: 1;
+        min-width: 200px;
+    }
+}

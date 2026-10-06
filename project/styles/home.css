@@ -1,0 +1,137 @@
+/* Home page styles */
+
+.hero {
+    position: relative;
+    margin: 1.5rem 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.hero img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.hero-caption {
+    background: rgba(15, 107, 79, 0.92);
+    color: var(--white);
+    padding: 1rem 1.25rem;
+}
+
+.hero-caption h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.4rem;
+}
+
+.hero-caption p {
+    margin: 0 0 0.75rem;
+    color: var(--yellow);
+}
+
+.btn {
+    display: inline-block;
+    background: var(--yellow);
+    color: var(--blue);
+    font-family: var(--heading-font);
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.6rem 1.1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #ffd15c;
+    color: var(--blue);
+    transform: translateY(-1px);
+}
+
+.greeting-note {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    color: var(--green-dark);
+    border-left: 4px solid var(--yellow);
+    padding-left: 0.75rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.stat-card {
+    background: var(--green);
+    color: var(--white);
+    border-radius: var(--radius);
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-value {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--yellow);
+}
+
+.stat-label {
+    font-size: 0.85rem;
+}
+
+.scenario-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.scenario {
+    background: var(--cloud);
+    border: 1px solid var(--border);
+    border-top: 4px solid var(--green);
+    border-radius: var(--radius);
+    padding: 1rem;
+}
+
+.scenario h3 {
+    color: var(--blue);
+    margin: 0 0 0.5rem;
+}
+
+@media (min-width: 640px) {
+    .hero img {
+        height: 380px;
+    }
+
+    .hero-caption {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(15, 107, 79, 0.85);
+        padding: 1.5rem;
+    }
+
+    .hero-caption h2 {
+        font-size: 2rem;
+    }
+
+    .stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .scenario-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

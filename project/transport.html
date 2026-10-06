@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Compare keke tricycles, mini-buses, shared taxis, ride-hailing apps and water transport in Port Harcourt, Rivers State — pros, cons and best uses.">
+    <meta name="author" content="Sydney Tamunotonye">
+    <title>Transport Options | TONYEWAYLTD</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/transport.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="TONYEWAYLTD logo" width="56" height="56">
+                <div class="brand-text">
+                    <h1>TONYEWAYLTD</h1>
+                    <span class="tagline">A Commuter's Guide</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Primary">
+                <ul id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="transport.html" aria-current="page">Transport</a></li>
+                    <li><a href="fares.html">Fares &amp; Routes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h2>Five ways to move through the city</h2>
+            <p class="page-intro">
+                Port Harcourt runs on a mix of informal and app-based transport. Each option solves a different
+                problem: cheap short hops, fixed long routes, privacy, speed on water, or safety at night. Use the
+                filter below to narrow the list to what matters to you right now.
+            </p>
+
+            <form class="filter-bar" id="filter-form">
+                <label for="filter-need">Show me options that are best for:</label>
+                <select id="filter-need" name="need">
+                    <option value="all">Everything</option>
+                    <option value="budget">Low budget</option>
+                    <option value="speed">Speed</option>
+                    <option value="safety">Safety and comfort</option>
+                    <option value="short">Very short trips</option>
+                    <option value="long">Long or cross-city trips</option>
+                </select>
+                <button type="button" class="btn" id="sort-btn">Sort by typical fare (low to high)</button>
+                <p class="result-count" id="result-count" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <!-- Option cards are rendered by JavaScript -->
+        <div class="option-grid" id="option-grid">
+            <!-- Populated by scripts/transport.js -->
+        </div>
+
+        <section>
+            <h2>On the street</h2>
+            <figure class="photo">
+                <img src="images/transport-street.webp"
+                    alt="Buses and taxis lined up along a busy road in Port Harcourt" width="800" height="425"
+                    loading="lazy" decoding="async">
+                <figcaption>
+                    Keke, buses and taxis share the same streets at the city's busiest junctions.
+                </figcaption>
+            </figure>
+            <p>
+                At peak hours the roads fill with every mode at once. Knowing which one to flag down — and where it
+                will actually stop — is half the challenge. The other half is timing. Leave before 7am or between 10am
+                and 4pm and you will move noticeably faster.
+            </p>
+        </section>
+
+        <section>
+            <h2>What to keep in mind</h2>
+            <ul>
+                <li><strong>Agree the fare before you board.</strong> For keke and taxis the price is negotiated, not
+                    fixed.</li>
+                <li><strong>Carry small notes and coins.</strong> Drivers rarely have change for large naira notes.</li>
+                <li><strong>Rain changes everything.</strong> Fares rise and traffic slows during heavy rain; plan
+                    extra time between April and October.</li>
+                <li><strong>Share your trip.</strong> When using ride-hailing apps or late-night transport, send your
+                    trip details to someone you trust.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <p>&copy; <span id="currentyear"></span> TONYEWAYLTD | Sydney Tamunotonye</p>
+                <p>Last modified: <span id="lastmodified"></span></p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="transport.html">Transport</a></li>
+                <li><a href="fares.html">Fares &amp; Routes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/transport.js" defer></script>
+</body>
+
+</html>

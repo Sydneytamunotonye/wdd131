@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Getting Around Port Harcourt: a commuter's guide to keke, buses, taxis, ride-hailing and water transport in Port Harcourt, Rivers State, Nigeria.">
+    <meta name="author" content="Sydney Tamunotonye">
+    <title>TONYEWAYLTD | Home</title>
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="images/logo.svg" alt="TONYEWAYLTD logo" width="56" height="56">
+                <div class="brand-text">
+                    <h1>TONYEWAYLTD</h1>
+                    <span class="tagline">A Commuter's Guide</span>
+                </div>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+
+            <nav id="primary-nav" aria-label="Primary">
+                <ul id="nav-list">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="transport.html">Transport</a></li>
+                    <li><a href="fares.html">Fares &amp; Routes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero -->
+        <div class="hero">
+            <img src="images/ph-hero-large.webp"
+                srcset="images/ph-hero-small.webp 640w, images/ph-hero-large.webp 1280w" sizes="100vw"
+                alt="Keke tricycles and vehicles sharing a busy street in Port Harcourt" width="1280" height="960">
+            <div class="hero-caption">
+                <h2>Move through the Garden City with confidence</h2>
+                <p>Fares, routes, safety tips and transport options — all in one place.</p>
+                <a class="btn" href="transport.html">Explore transport options</a>
+            </div>
+        </div>
+
+        <section>
+            <h2>Welcome, commuter</h2>
+            <p class="page-intro">
+                Port Harcourt is a fast-moving city, and public transport keeps it running. Keke tricycles,
+                mini-buses, shared taxis, ride-hailing apps and riverboats each have their own rules, prices and
+                routes. This guide pulls that knowledge together so that residents, students and first-time
+                visitors can plan a trip without guessing.
+            </p>
+            <p>
+                Whether you are a student travelling daily from Choba to Trans-Amadi or a visitor trying to reach
+                the airport, start with the overview below, then dig into the details on the
+                <a href="transport.html">Transport</a> and <a href="fares.html">Fares &amp; Routes</a> pages.
+            </p>
+        </section>
+
+        <!-- Dynamic "at a glance" stats rendered by JavaScript -->
+        <section>
+            <h2>Port Harcourt at a glance</h2>
+            <p class="page-intro">Live figures from this guide's transport dataset.</p>
+            <div class="stats" id="stats-grid">
+                <!-- Populated by scripts/home.js -->
+            </div>
+        </section>
+
+        <section>
+            <h2>Your quick scenarios</h2>
+            <div class="scenario-grid">
+                <article class="scenario">
+                    <h3>Rumuokoro &rarr; Mile 1</h3>
+                    <p>How much should you expect to pay for a keke, and should you carry exact change? See the
+                        fare table.</p>
+                    <a href="fares.html">Check fares</a>
+                </article>
+                <article class="scenario">
+                    <h3>Beating rush hour</h3>
+                    <p>Learn the busiest travel times and how the rainy season changes your commute.</p>
+                    <a href="fares.html#tips">Read commute tips</a>
+                </article>
+                <article class="scenario">
+                    <h3>Choba &rarr; Trans-Amadi</h3>
+                    <p>Which option is safest and cheapest for a daily student trip? Compare them side by side.</p>
+                    <a href="transport.html">Compare options</a>
+                </article>
+            </div>
+        </section>
+
+        <section>
+            <h2>How this guide is organised</h2>
+            <ul>
+                <li><strong>Transport</strong> — the five main ways to move around, with pros, cons and best uses.</li>
+                <li><strong>Fares &amp; Routes</strong> — typical fares, key landmarks and a trip planner form you can
+                    submit.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <p>&copy; <span id="currentyear"></span> Getting Around Port Harcourt | Sydney Tamunotonye</p>
+                <p>Last modified: <span id="lastmodified"></span></p>
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="transport.html">Transport</a></li>
+                <li><a href="fares.html">Fares &amp; Routes</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/home.js" defer></script>
+</body>
+
+</html>

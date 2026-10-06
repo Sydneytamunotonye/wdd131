@@ -1,0 +1,333 @@
+/* ==========================================================================
+   Getting Around Port Harcourt — Shared Base Styles
+   Author: Sydney Tamunotonye
+   ========================================================================== */
+
+:root {
+    --green: #0f6b4f;
+    --green-dark: #0a4a37;
+    --blue: #1f3a5f;
+    --yellow: #ffb703;
+    --cloud: #f4f7f5;
+    --white: #ffffff;
+    --text: #20303c;
+    --border: #d9e0dd;
+
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Source Sans 3", sans-serif;
+
+    --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --radius: 8px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--body-font);
+    background-color: var(--cloud);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--green-dark);
+}
+
+a:hover,
+a:focus {
+    color: #b57f00;
+}
+
+/* Skip link for keyboard users */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    background: var(--yellow);
+    color: var(--blue);
+    padding: 0.75rem 1rem;
+    z-index: 999;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Header and Navigation
+   -------------------------------------------------------------------------- */
+header {
+    background: var(--green);
+    color: var(--white);
+}
+
+.header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.brand img {
+    width: 56px;
+    height: 56px;
+}
+
+.brand-text h1 {
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.brand-text .tagline {
+    margin: 0.15rem 0 0;
+    color: var(--yellow);
+    font-size: 0.85rem;
+}
+
+/* Hamburger toggle button */
+.nav-toggle {
+    margin-left: auto;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    padding: 8px;
+    background: transparent;
+    border: 2px solid var(--white);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    flex-direction: column;
+}
+
+nav ul.open {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 0.9rem 0.75rem;
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--heading-font);
+    font-weight: 600;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--green-dark);
+    color: var(--white);
+}
+
+nav a[aria-current="page"] {
+    background: var(--yellow);
+    color: var(--blue);
+}
+
+/* The references page uses an always-visible nav that needs no toggle. */
+.ref-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+}
+
+.ref-nav a {
+    border-top: none;
+    border-radius: 6px;
+}
+
+/* --------------------------------------------------------------------------
+   Main content
+   -------------------------------------------------------------------------- */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem 2rem;
+}
+
+section {
+    background: var(--white);
+    border-left: 6px solid var(--blue);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem 0;
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    color: var(--green);
+    margin-top: 0;
+    border-bottom: 2px solid var(--yellow);
+    padding-bottom: 0.35rem;
+}
+
+.page-intro {
+    font-size: 1.05rem;
+    color: var(--blue);
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+footer {
+    background: var(--blue);
+    color: var(--white);
+    padding: 1.5rem 1rem;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    color: var(--yellow);
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--white);
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+footer p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+}
+
+/* Figures and captions used inside content sections */
+.photo {
+    margin: 1rem 0;
+}
+
+.photo img {
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 100%;
+}
+
+.photo figcaption {
+    font-size: 0.85rem;
+    color: var(--blue);
+    font-style: italic;
+    padding-top: 0.4rem;
+}
+
+/* --------------------------------------------------------------------------
+   Larger screens
+   -------------------------------------------------------------------------- */
+@media (min-width: 760px) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .brand-text h1 {
+        font-size: 1.8rem;
+    }
+
+    nav {
+        width: auto;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav a {
+        border-top: none;
+        border-radius: 6px;
+        padding: 0.6rem 0.9rem;
+    }
+}
