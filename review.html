@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Confirmation page shown after a product review is submitted.">
+    <meta name="author" content="Sydney Tamunotonye">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;800&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/review.js" defer></script>
+    <title>WDD 131 – Review Confirmation – Sydney Tamunotonye</title>
+</head>
+
+<body>
+    <header>
+        <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/sydneytamunotonye/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">I-learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/2-ne/2?lang=eng">Scripture</a>
+                </li>
+                <li><a href="form.html">Product Review</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Thank You!</h1>
+
+        <section class="confirmation card">
+            <p class="confirmation-message">Your product review has been submitted successfully.</p>
+            <p class="review-counter">
+                Reviews completed: <span id="reviewCount">0</span>
+            </p>
+            <p><a class="back-link" href="form.html">Submit another review</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Sydney Tamunotonye. Nigeria All rights reserved.</p>
+        <p>last modified: <span id="lastmodified"></span></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+.review-form {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e0e0e0;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    border: none;
+    padding: 0;
+}
+
+.form-field > label,
+.form-field legend {
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.4rem;
+    font-size: 1.05rem;
+}
+
+.optional {
+    font-weight: 400;
+    color: #777;
+    font-size: 0.85rem;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.7rem;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--text);
+    border: 1px solid #c4c4c4;
+    border-radius: 6px;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.rating-group {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.rating-item {
+    position: relative;
+}
+
+.rating-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.rating-item label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    line-height: 1;
+    color: #bdbdbd;
+    cursor: pointer;
+    transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.rating-item label:hover {
+    transform: scale(1.1);
+}
+
+.rating-item input[type="radio"]:checked + label {
+    color: var(--accent);
+}
+
+.rating-item input[type="radio"]:focus-visible + label {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.features-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.6rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.feature-item input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.feature-item label {
+    font-weight: 400;
+    color: var(--text);
+    margin: 0;
+    cursor: pointer;
+}
+
+
+.submit-field {
+    margin-bottom: 0;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-family: "Barlow", sans-serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: white;
+    background: var(--primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.1s ease;
+}
+
+.submit-btn:hover {
+    background: var(--secondary);
+}
+
+.submit-btn:active {
+    transform: scale(0.99);
+}
+
+.submit-btn:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+
+.confirmation {
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.confirmation-message {
+    font-size: 1.15rem;
+    margin-top: 0;
+}
+
+.review-counter {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--secondary);
+    background: var(--light);
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+.review-counter span {
+    display: inline-block;
+    min-width: 2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: var(--secondary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 600px) {
+    .review-form {
+        padding: 2.5rem;
+    }
+}
