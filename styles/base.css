@@ -5,6 +5,13 @@
     --dark: #1b1b1b;
     --accent: #ffb300;
     --text: #333;
+    --white: #ffffff;
+    --border: #e0e0e0;
+    --input-border: #c4c4c4;
+    --muted: #777777;
+    --star-empty: #bdbdbd;
+    --focus-ring: rgba(26, 115, 232, 0.2);
+    --shadow: rgba(0, 0, 0, 0.12);
 }
 
 * {
