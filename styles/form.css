@@ -1,9 +1,19 @@
+:root {
+    --white: #ffffff;
+    --border: #e0e0e0;
+    --input-border: #c4c4c4;
+    --muted: #777777;
+    --star-empty: #bdbdbd;
+    --focus-ring: rgba(26, 115, 232, 0.2);
+    --shadow: rgba(0, 0, 0, 0.12);
+}
+
 .review-form {
-    background: white;
+    background: var(--white);
     padding: 1.75rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
-    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px var(--shadow);
+    border: 1px solid var(--border);
     max-width: 640px;
     margin: 0 auto;
 }
@@ -16,7 +26,7 @@
     padding: 0;
 }
 
-.form-field > label,
+.form-field>label,
 .form-field legend {
     font-weight: 600;
     color: var(--secondary);
@@ -26,7 +36,7 @@
 
 .optional {
     font-weight: 400;
-    color: #777;
+    color: var(--muted);
     font-size: 0.85rem;
 }
 
@@ -39,9 +49,9 @@ textarea {
     font-family: inherit;
     font-size: 1rem;
     color: var(--text);
-    border: 1px solid #c4c4c4;
+    border: 1px solid var(--input-border);
     border-radius: 6px;
-    background: #fff;
+    background: var(--white);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -51,7 +61,7 @@ select:focus,
 textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+    box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 textarea {
@@ -85,7 +95,7 @@ textarea {
     justify-content: center;
     font-size: 2.6rem;
     line-height: 1;
-    color: #bdbdbd;
+    color: var(--star-empty);
     cursor: pointer;
     transition: color 0.15s ease, transform 0.15s ease;
 }
@@ -94,11 +104,11 @@ textarea {
     transform: scale(1.1);
 }
 
-.rating-item input[type="radio"]:checked + label {
+.rating-item input[type="radio"]:checked+label {
     color: var(--accent);
 }
 
-.rating-item input[type="radio"]:focus-visible + label {
+.rating-item input[type="radio"]:focus-visible+label {
     outline: 2px solid var(--primary);
     outline-offset: 2px;
     border-radius: 4px;
@@ -142,7 +152,7 @@ textarea {
     font-size: 1.15rem;
     font-weight: 800;
     letter-spacing: 0.5px;
-    color: white;
+    color: var(--white);
     background: var(--primary);
     border: none;
     border-radius: 8px;
@@ -182,7 +192,7 @@ textarea {
     background: var(--light);
     padding: 1rem;
     border-radius: 8px;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--border);
 }
 
 .review-counter span {
