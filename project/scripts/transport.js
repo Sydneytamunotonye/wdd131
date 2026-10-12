@@ -1,7 +1,3 @@
-// Transport page: filter and sort the option cards.
-// Exercises DOM selection/modification, event listeners, conditionals,
-// array methods, template literals and objects.
-
 const optionGrid = document.getElementById("option-grid");
 const filterForm = document.getElementById("filter-form");
 const filterNeed = document.getElementById("filter-need");
@@ -10,11 +6,9 @@ const resultCount = document.getElementById("result-count");
 
 let currentlySorted = false;
 
-// Build one card's HTML from an option object using a template literal.
 const buildCard = (option) => {
     const prosItems = option.pros.split(", ").map((item) => `<li>${item}</li>`).join("");
 
-    // Conditional badge based on the cheapest starting fare.
     const valueBadge =
         option.fareLow <= 500
             ? `<p class="badge badge-value">Great value</p>`
@@ -35,7 +29,6 @@ const buildCard = (option) => {
         </article>`;
 };
 
-// Render a list of options into the grid.
 const renderOptions = (list) => {
     if (list.length === 0) {
         optionGrid.innerHTML = `<p class="empty">No options match that need. Try another filter.</p>`;
@@ -46,7 +39,6 @@ const renderOptions = (list) => {
     resultCount.textContent = `Showing ${list.length} of ${transportOptions.length} options.`;
 };
 
-// Apply the current filter and sort state.
 const applyView = () => {
     const need = filterNeed.value;
 
@@ -63,10 +55,8 @@ const applyView = () => {
     renderOptions(visible);
 };
 
-// React to filter changes.
 filterForm.addEventListener("change", applyView);
 
-// Toggle sorting by fare.
 sortBtn.addEventListener("click", () => {
     currentlySorted = !currentlySorted;
     sortBtn.textContent = currentlySorted
@@ -75,5 +65,4 @@ sortBtn.addEventListener("click", () => {
     applyView();
 });
 
-// Initial render.
 renderOptions(transportOptions);

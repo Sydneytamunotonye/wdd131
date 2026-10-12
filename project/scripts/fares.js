@@ -1,11 +1,6 @@
-// Fares & Routes page: fare table, calculator, landmark cards, tips,
-// and the trip planner form with localStorage persistence.
-
 const fareBody = document.getElementById("fare-body");
 const landmarkGrid = document.getElementById("landmark-grid");
 const tipsList = document.getElementById("tips-list");
-
-// Build a fare lookup from the shared dataset.
 const fareByMode = transportOptions.map((option) => ({
     mode: option.name,
     short: Math.round(option.fareLow * 0.6),
@@ -13,7 +8,6 @@ const fareByMode = transportOptions.map((option) => ({
     long: option.fareHigh
 }));
 
-// --- Fare table ---
 if (fareBody) {
     fareBody.innerHTML = fareByMode
         .map(
@@ -28,7 +22,6 @@ if (fareBody) {
         .join("");
 }
 
-// --- Landmark cards ---
 if (landmarkGrid) {
     landmarkGrid.innerHTML = landmarks
         .map(
@@ -41,12 +34,10 @@ if (landmarkGrid) {
         .join("");
 }
 
-// --- Tips list ---
 if (tipsList) {
     tipsList.innerHTML = commuteTips.map((tip) => `<li>${tip}</li>`).join("");
 }
 
-// --- Trip cost calculator ---
 const calcBtn = document.getElementById("calc-btn");
 const calcOutput = document.getElementById("calc-output");
 const calcMode = document.getElementById("calc-mode");
@@ -80,7 +71,6 @@ if (calcBtn) {
 
         calcOutput.textContent = `A ${trip.toLowerCase()} by ${mode.toLowerCase()} typically costs about ${formatNaira(low)} to ${formatNaira(high)}${mode === "Mini-bus" ? " per person." : "."}`;
 
-        // Remember the last calculation.
         localStorage.setItem(
             "ph-guide-last-fare",
             JSON.stringify({ mode, trip, low, high })
@@ -88,7 +78,6 @@ if (calcBtn) {
     });
 }
 
-// Restore the last calculation so the value survives a refresh.
 if (calcOutput) {
     const stored = localStorage.getItem("ph-guide-last-fare");
 
@@ -98,7 +87,6 @@ if (calcOutput) {
     }
 }
 
-// --- Trip planner form ---
 const tripForm = document.getElementById("trip-form");
 const formStatus = document.getElementById("form-status");
 
@@ -106,8 +94,6 @@ if (tripForm) {
     tripForm.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        // Read the fields. Use form.elements so none of these clash with
-        // properties that belong to the form element itself.
         const fields = tripForm.elements;
         const name = fields.name.value.trim();
         const email = fields.email.value.trim();
@@ -117,7 +103,6 @@ if (tripForm) {
         const notes = fields.notes.value.trim();
         const chosenMode = fields.mode.value;
 
-        // Conditional validation.
         if (!name || !from || !to || !chosenMode) {
             formStatus.textContent = "Please fill in your name, both locations, and pick a mode.";
             formStatus.className = "form-status error";
@@ -141,12 +126,10 @@ if (tripForm) {
             savedAt: new Date().toISOString()
         };
 
-        // Persist the plan(s) with localStorage.
         const existing = JSON.parse(localStorage.getItem("ph-guide-plans")) || [];
         const updated = [...existing, plan];
         localStorage.setItem("ph-guide-plans", JSON.stringify(updated));
 
-        // Confirm with a template literal.
         formStatus.textContent = `Thanks, ${name}! Your ${when.toLowerCase()} trip from ${from} to ${to} by ${plan.mode.toLowerCase()} has been saved on this device (plan #${updated.length}).`;
         formStatus.className = "form-status success";
 

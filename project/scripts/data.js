@@ -1,6 +1,3 @@
-// Shared data and helpers for Getting Around Port Harcourt
-
-// The core dataset of transport options used across the site.
 const transportOptions = [
     {
         name: "Keke (tricycle)",
@@ -64,7 +61,6 @@ const transportOptions = [
     }
 ];
 
-// Landmarks commuters use to navigate.
 const landmarks = [
     { name: "Rumuokoro", note: "Major bus park and gateway to the north of the city." },
     { name: "Mile 1 / Mile 3 Market", note: "Busy central markets and transport hubs." },
@@ -74,7 +70,6 @@ const landmarks = [
     { name: "Airport Road", note: "Route toward the airport, best planned well ahead." }
 ];
 
-// Practical commute tips.
 const commuteTips = [
     "Agree the fare before you board; keke and taxi prices are negotiable.",
     "Carry small naira notes and coins — drivers rarely have change.",
@@ -84,8 +79,6 @@ const commuteTips = [
     "Keep valuables out of sight and sit where you can see your route."
 ];
 
-// Simple helper: format a number as naira.
 const formatNaira = (amount) => `₦${amount.toLocaleString("en-NG")}`;
 
-// Simple helper: pick a fare range string from the dataset.
 const fareRange = (option) => `${formatNaira(option.fareLow)} – ${formatNaira(option.fareHigh)}`;

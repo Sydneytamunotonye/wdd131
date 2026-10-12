@@ -1,10 +1,6 @@
-// Home page: render "at a glance" stats and a greeting.
-// Uses objects, arrays, array methods, conditional branching and template literals.
-
 const statsGrid = document.getElementById("stats-grid");
 
 if (statsGrid) {
-    // Reduce the transport dataset into aggregate statistics.
     const cheapestFare = transportOptions.reduce(
         (lowest, option) => (option.fareLow < lowest ? option.fareLow : lowest),
         Infinity
@@ -25,7 +21,6 @@ if (statsGrid) {
         { value: new Set(mostCommonBestFor).size, label: "ways to match your needs" }
     ];
 
-    // Build the cards with template literals.
     statsGrid.innerHTML = stats
         .map(
             (stat) => `
@@ -37,7 +32,6 @@ if (statsGrid) {
         .join("");
 }
 
-// A small greeting that reacts to the time of day and is stored in localStorage.
 const welcomeHeading = document.querySelector(".page-intro");
 
 if (welcomeHeading) {
